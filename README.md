@@ -1,1 +1,6 @@
 # FlightDelay
+
+### How to Use Streaming Service
+There are three files under Nolan named Step1_Batch_Processing.ipynb, Step2_Streaming_Prediction.ipynb, and Kafka_Producer.py.
+
+Put these files into a folder (I named my folder "Project") on your VM on GCP. In this folder, you should have these three files plus the dataset titled "flight_data.csv". First, make sure Kafka is running by opening a terminal and typing "sudo systemctl status kafka". You should run this command in the terminal on the home directory (cd ../). It should say Kafka is active. Then, go into your Jupyter Lab and run all the lines of code in the Step1 file. This will save a random forest pipeline and random forest model to your project folder which will be used in the next steps. In another terminal, cd into the project folder and run the Kafka Producer. To do this, either type python3 Kafka_Producer.py or python Kafka_Producer.py (depends on what version you have). This will start the streaming using Kafka - keep this terminal running throughout the streaming process. Just leave it running in the background. Once that is going, go back to Jupyter Lab and run the Step2 file. It will begin streaming the data and should work, showing you the batched and predictions as they come in.
