@@ -10,10 +10,12 @@
     <div class="container">
         <h1>Visualizations of Flight Delay Dataset</h1>
         
+        <!-- ORIGINAL MATRIX VISUALIZATION -->
         <div class="visualization-section">
             <h2>Dataset Visualizations</h2>
             <div class="image-selector">
-                <!-- Top row buttons (0-5) -->
+
+                <!-- TOP ROW BUTTONS (0–6) -->
                 <div class="top-buttons">
                     <div class="empty-corner"></div>
                     <button class="col-btn" data-col="0">Day of Week</button>
@@ -25,7 +27,7 @@
                     <button class="col-btn" data-col="6">Cause of Delay</button>
                 </div>
                 
-                <!-- Row buttons (0-3) and image display -->
+                <!-- LEFT ROW BUTTONS (0–4) + IMAGE -->
                 <div class="main-content">
                     <div class="row-buttons">
                         <button class="row-btn" data-row="0">Average Arrival Delay</button>
@@ -36,7 +38,7 @@
                     </div>
                     
                     <div class="image-container">
-                        <img id="displayed-image" src="" alt="Selected image will appear here">
+                        <img id="displayed-image" src="" alt="Visualization" style="display:none;">
                         <div id="no-selection">Please select row and column buttons</div>
                     </div>
                 </div>
@@ -48,46 +50,52 @@
         </div>
         
         <hr class="section-divider">
-        
+
+        <!-- 3D MATRIX VISUALIZATION -->
         <div class="visualization-section">
             <h2>Modeling Visualization</h2>
+
             <div class="threed-matrix-selector">
                 <div class="threed-matrix-layout">
-                    <!-- Left buttons (first digit) -->
+
+                    <!-- DIGIT 1 BUTTONS -->
                     <div class="left-buttons">
                         <button class="digit1-btn" data-digit1="8">Confusion Matrix</button>
                         <button class="digit1-btn" data-digit1="9">Model Evaluation</button>
                     </div>
                     
                     <div class="center-content">
-                        <!-- Top buttons (second digit) -->
+
+                        <!-- DIGIT 2 BUTTONS -->
                         <div class="top-digit-buttons">
                             <button class="digit2-btn" data-digit2="0">RFC</button>
                             <button class="digit2-btn" data-digit2="1">LR</button>
                             <button class="digit2-btn" data-digit2="2">GBT</button>
                         </div>
-                        
-                        <!-- Image container -->
+
+                        <!-- IMAGE -->
                         <div class="threed-image-container">
-                            <img id="threed-displayed-image" src="" alt="Selected image from 3D matrix">
+                            <img id="threed-displayed-image" src="" alt="3D Visualization" style="display:none;">
                             <div id="threed-no-selection">Please select buttons from all three dimensions</div>
                         </div>
                     </div>
-                    
-                    <!-- Right buttons (third digit) -->
+
+                    <!-- DIGIT 3 BUTTONS -->
                     <div class="right-buttons">
                         <button class="digit3-btn" data-digit3="0">Weighting</button>
                         <button class="digit3-btn" data-digit3="1">Resampling</button>
                     </div>
+
                 </div>
             </div>
-            
+
             <div class="threed-selection-info">
                 <p>Currently selected: <span id="threed-selection-text">None</span></p>
             </div>
         </div>
+
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
