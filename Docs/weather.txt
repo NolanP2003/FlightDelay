@@ -1,8 +1,0 @@
-
-NOAA National Centers for Environmental Information
-
-Government Website: https://www.ncei.noaa.gov/cdo-web/search?datasetid=GHCND
-Page to Search/Download: https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C00861/html 
-NCEI Direct Download: https://www.ncei.noaa.gov/pub/data/ghcn/daily/
-
-2019, 2020, 2021, 2022, 2023 (.csv.gz files)
