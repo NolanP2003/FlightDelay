@@ -364,21 +364,6 @@ curl http://localhost:5000
 
 ---
 
-## Troubleshooting
-
-| Issue | Solution |
-|-------|----------|
-| **Kafka not starting** | • Ensure Zookeeper is running first<br>• Check port 9092 is not in use: `lsof -i :9092`<br>• Restart Kafka: `sudo systemctl restart kafka` |
-| **Spark fails to load models** | • Verify Step2 completed successfully<br>• Check model directories exist: `ls flight_delay_gbt_*`<br>• Re-run Step2 if models are corrupted |
-| **Out of memory errors** | • Reduce Spark memory in notebooks: `.config("spark.driver.memory", "4g")`<br>• Use data sampling: `df.sample(fraction=0.1)`<br>• Increase VM RAM |
-| **Flask shows no predictions** | • Verify Parquet files exist: `ls ./streaming_predictions_output/`<br>• Ensure Step3 is running<br>• Wait 30-60 seconds for first predictions |
-| **Live Server not working** | • Install Live Server extension in VS Code<br>• Try opening directly: `file:///path/to/Dataset%20Application/index.html` |
-| **Predictions not updating** | • Check Kafka producer is still running<br>• Verify Step3 notebook shows new batches<br>• Refresh Flask dashboard manually (F5) |
-
-For more detailed troubleshooting, see our [Installation & Setup Wiki](https://github.com/NolanP2003/FlightDelay/wiki/Installation-&-Setup).
-
----
-
 ## Project Workflow Summary
 
 1. **Data Exploration** → Run `Step1_Data_Visualization.ipynb`
@@ -388,12 +373,6 @@ For more detailed troubleshooting, see our [Installation & Setup Wiki](https://g
 5. **Start Dashboard** → Run `app.py` (Terminal 2)
 6. **View Predictions** → Access `http://<VM_IP>:5000`
 7. **Explore Visualizations** → Open `Dataset Application/index.html` (local machine)
-
----
-
-## Contributing
-
-We welcome contributions! Please feel free to submit issues or pull requests.
 
 ---
 
